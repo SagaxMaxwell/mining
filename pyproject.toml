@@ -3,19 +3,16 @@ name = "mining"
 version = "0.1.0"
 description = "Data mining tutorials with curated datasets and optimized notebooks."
 readme = "README.md"
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.11"
 dependencies = [
-    "ipykernel>=6.0",
-    "jupyterlab>=4.0",
-    "matplotlib>=3.7",
+    "ipykernel>=6.29",
+    "jupyterlab>=4.2",
+    "matplotlib>=3.8",
     "mlxtend>=0.23",
-    "notebook>=7.0",
-    "numpy>=1.24",
-    "openpyxl>=3.1",
-    "pandas>=2.0",
-    "scikit-learn>=1.3",
-    "statsmodels>=0.14",
-    "xlrd>=2.0",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "polars>=1.42.1",
+    "scikit-learn>=1.4",
 ]
 
 [tool.uv]
@@ -24,6 +21,19 @@ package = false
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.21",
+]
+
+[tool.ruff]
+extend-exclude = ["*.ipynb"]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
 
 [tool.setuptools]
 py-modules = []
