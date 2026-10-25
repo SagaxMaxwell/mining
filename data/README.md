@@ -1,4 +1,4 @@
-# 数据集说明
+# 数据集
 
 | 文件 | 编码 | 用途 |
 | --- | --- | --- |
@@ -9,4 +9,4 @@
 | `scores.csv` | UTF-8 | 成绩统计 |
 | `turnover.csv` | UTF-8 | 销售相关性 |
 
-GBK 文件读取时显式传入 `encoding="gbk"`。
+读取 GBK 文件时显式传入 `encoding="gbk"`。

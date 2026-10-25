@@ -1,38 +1,21 @@
-# 数据挖掘教程项目
+# 数据挖掘教程
 
-现代数据挖掘教程。只保留可运行、可维护的活跃内容。
+可运行的现代数据挖掘示例，统一使用 Python + uv。
 
-## 内容
+## 教程
 
-| 路径 | 说明 |
-| --- | --- |
-| `tutorials/explore/` | Polars 数据探索 |
-| `tutorials/customers/` | 客户聚类画像 |
-| `tutorials/basket/` | FP-Growth 购物篮分析 |
-| `tutorials/forecast/` | 监督学习式时间序列预测 |
-| `tutorials/common.py` | Notebook 公共函数 |
-| `data/` | 教程数据 |
-| `scripts/` | 校验脚本 |
+- `tutorials/explore/`：Polars 数据探索
+- `tutorials/customers/`：客户聚类画像
+- `tutorials/basket/`：FP-Growth 购物篮分析
+- `tutorials/forecast/`：梯度提升时间序列预测
 
-## 运行
-
-推荐 Python 3.11+ 和 `uv`：
+公共函数在 `tutorials/common.py`，数据在 `data/`。
 
 ```bash
 uv sync
 uv run jupyter lab
-```
-
-校验：
-
-```bash
 uv run ruff check scripts tutorials
 uv run python scripts/validate.py
 ```
 
-## 约定
-
-- 每个教程含 `README.md` 和一个 notebook。
-- 公共路径、绘图和指标放在 `tutorials/common.py`。
-- 保留现代主线：Polars、HDBSCAN、FP-Growth、梯度提升。
-- 不维护旧手写算法和经典统计时间序列教程。
+每个教程包含 `README.md` 和 notebook。数据文件的编码以 `data/README.md` 为准。
