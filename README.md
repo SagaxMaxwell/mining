@@ -1,21 +1,25 @@
+---
+date created: 2026-07-10T11:11
+date updated: 2026-10-26T11:44
+---
 # 数据挖掘教程
 
-可运行的现代数据挖掘示例，统一使用 Python + uv。
+使用 Python 与 Notebook 完成数据探索、聚类、关联规则和预测。
 
 ## 教程
 
-- `tutorials/explore/`：Polars 数据探索
-- `tutorials/customers/`：客户聚类画像
-- `tutorials/basket/`：FP-Growth 购物篮分析
-- `tutorials/forecast/`：梯度提升时间序列预测
+- [[tutorials/explore/explore.ipynb|Polars 数据探索]]
+- [[tutorials/customers/customers.ipynb|客户聚类画像]]
+- [[tutorials/basket/basket.ipynb|购物篮分析]]
+- [[tutorials/forecast/forecast.ipynb|时间序列预测]]
 
-公共函数在 `tutorials/common.py`，数据在 `data/`。
+## 运行
+
+在 `mining` 根目录执行，打开教程后从上到下运行单元。
 
 ```bash
 uv sync
 uv run jupyter lab
-uv run ruff check scripts tutorials
-uv run python scripts/validate.py
 ```
 
-每个教程包含 `README.md` 和 notebook。数据文件的编码以 `data/README.md` 为准。
+每篇教程包含所需的初始化与函数，可独立运行，无需加载其他 Notebook。数据编码见 [[mining/data/README|数据说明]]。
